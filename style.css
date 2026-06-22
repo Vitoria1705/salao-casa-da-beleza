@@ -168,18 +168,19 @@ main {
 .menu .box-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.6rem;
+    gap: 2.4rem;
+    align-items: stretch;
 }
 
 .menu .box {
     border: var(--border);
-    padding: 2rem;
-    text-align: center;
+    padding: 2.8rem 2.4rem;
     background: #000;
-    min-height: 430px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    min-height: 520px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1.8rem;
+    align-items: stretch;
 }
 
 .menu .box img {
@@ -187,18 +188,44 @@ main {
     width: 100%;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 1rem;
     border-radius: 0.6rem;
 }
 
+.menu .box h3 {
+    margin: 0;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    min-height: 4.2rem;
+}
 
 .menu .box p {
     color: #ccc;
-    font-size: 1.35rem;
-    line-height: 1.5;
-    min-height: 4.2rem;
-    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 0;
     text-transform: none;
+}
+
+.menu .box-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.menu .box-btns .btn,
+.menu .box-btns .btn-outline-gold {
+    padding: 1rem 1.8rem;
+    font-size: 1.4rem;
+    min-width: 220px;
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
 }
 
 /* Título da seção: "Nossos" branco, "Serviços" dourado, ambos em caixa alta */
@@ -250,11 +277,11 @@ main {
     box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
 
-/* Desktop: 4 colunas */
+/* Desktop: 3 colunas */
 @media (min-width: 992px) {
     .menu .box-container {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.8rem;
     }
 }
 
@@ -262,7 +289,13 @@ main {
 @media (min-width: 600px) and (max-width: 991px) {
     .menu .box-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.6rem;
+        gap: 2.4rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .menu .box-container {
+        gap: 1.8rem;
     }
 }
 
