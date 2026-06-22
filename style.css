@@ -232,9 +232,13 @@ main {
 }
 
 .box-btns .btn {
-    width: 100%;
+    width: auto;
     text-align: center;
     margin-top: 0;
+    align-self: center;
+    padding: 0.6rem 1.4rem;
+    min-width: 140px;
+    border-radius: 2rem;
 }
 
 .btn-outline-gold {
@@ -331,6 +335,13 @@ main {
 
     .menu .box img {
         height: 180px;
+    }
+
+    .box-btns .btn,
+    .btn-outline-gold {
+        width: 100%;
+        min-width: 0;
+        border-radius: 0.6rem;
     }
 }
 
