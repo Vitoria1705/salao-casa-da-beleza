@@ -174,7 +174,8 @@ main {
 .menu .box-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 2.4rem;
+    column-gap: 2.4rem;
+    row-gap: 2.8rem;
     align-items: stretch;
 }
 
@@ -182,7 +183,7 @@ main {
     border: var(--border);
     padding: 2rem 1.6rem;
     background: #000;
-    min-height: 520px;
+    min-height: 560px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 1.8rem;
@@ -288,7 +289,8 @@ main {
 @media (min-width: 992px) {
     .menu .box-container {
         grid-template-columns: repeat(4, 1fr);
-        gap: 2.4rem;
+        column-gap: 2.4rem;
+        row-gap: 3.2rem;
     }
 }
 
