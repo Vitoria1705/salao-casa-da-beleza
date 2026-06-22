@@ -171,11 +171,11 @@ main {
   width: 40px;
   height: 40px;
 }
+/* ===== Menu (Nossos Serviços) ===== */
 .menu .box-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 2.4rem;
-    row-gap: 2.8rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
     align-items: stretch;
 }
 
@@ -183,26 +183,36 @@ main {
     border: var(--border);
     padding: 2rem 1.6rem;
     background: #000;
-    min-height: 560px;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 1.8rem;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .menu .box img {
-    height: 220px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     border-radius: 0.6rem;
+    flex-shrink: 0;
 }
 
 .menu .box h3 {
-    margin: 0;
-    font-size: 1.9rem;
+    color: var(--main-color);
+    font-size: 1.65rem;
     line-height: 1.25;
-    min-height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    min-height: 5rem;
+    flex-shrink: 0;
+}
+
+.menu .box:hover h3 {
+    color: #ffffff;
 }
 
 .menu .box p {
@@ -211,31 +221,41 @@ main {
     line-height: 1.8;
     margin: 0;
     text-transform: none;
+    flex-grow: 1;
 }
 
-.menu .box-btns {
+.box-btns {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
-    justify-content: center;
     margin-top: auto;
-    width: 100%;
 }
 
-.menu .box-btns .btn,
-.menu .box-btns .btn,
-.menu .box-btns .btn-outline-gold {
-    padding: 0.6rem 1.2rem;
-    font-size: 1.35rem;
-    min-width: 160px;
+.box-btns .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
 }
 
 .btn-outline-gold {
-    background: transparent;
-    color: var(--main-color);
-    border: 0.1rem solid var(--main-color);
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #C9A84C;
+    border: 1.5px solid #C9A84C;
+    padding: 1rem 1.6rem;
+    border-radius: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
 }
 
+.btn-outline-gold:hover {
+    background-color: rgba(201, 168, 76, 0.14);
+    transform: scale(1.03);
+}
 /* Título da seção: "Nossos" branco, "Serviços" dourado, ambos em caixa alta */
 .title {
     color: #ffffff;
@@ -307,6 +327,10 @@ main {
     .menu .box-container {
         grid-template-columns: 1fr;
         gap: 1.6rem;
+    }
+
+    .menu .box img {
+        height: 180px;
     }
 }
 
